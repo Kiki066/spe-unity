@@ -493,6 +493,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5293489, y: 1.4884408, z: 5.7}
   m_Center: {x: -0.0000038146973, y: 0.95625347, z: 0.021571992}
+--- !u!20 &423766270 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1184644472, guid: b835317857f00364fb66c649d5be8fec,
+    type: 3}
+  m_PrefabInstance: {fileID: 805956081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &623468843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -640,9 +646,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 827352800, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827352801, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 827352803, guid: b835317857f00364fb66c649d5be8fec, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 827352806, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 827352806, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 423766270}
+    - target: {fileID: 827352806, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: cameraRotationLimit
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 827352807, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 453708752696770907, guid: b835317857f00364fb66c649d5be8fec,
         type: 3}
@@ -704,7 +734,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: leonard Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 827352800, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+    - {fileID: 827352801, guid: b835317857f00364fb66c649d5be8fec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b835317857f00364fb66c649d5be8fec, type: 3}
 --- !u!1 &965106808 stripped
 GameObject:

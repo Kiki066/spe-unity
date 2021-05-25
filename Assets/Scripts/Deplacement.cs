@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+
+[RequireComponent(typeof(PlayerMotor))]
 
 public class Deplacement : MonoBehaviour
 {
-
 
     [SerializeField]        //permet de faire apparaitre speed dans Unity
     private float speed = 3f;
@@ -19,21 +19,37 @@ public class Deplacement : MonoBehaviour
 
     private void Start()
     {
-        motor = GetComponent<PlayerMotor>();    //Stocke le script PlayerMotor dans Motor
+        motor = GetComponent<PlayerMotor>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        // Calculer la vitesse du mouvement de notre joueur
-        float xMov = Input.GetAxis("Horizontal");  // Input.GetAxisRaw retourne les valeurs 1 ou -1
-        float zMov = Input.GetAxis("Vertical");
+        //Calcul de la vitesse du joueur
+        float xMov = Input.GetAxisRaw("Horizontal");
+        float zMov = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveHorizontal = transform.right * xMov;    //Prend le champs right du composant "transform" de Unity.
+        Vector3 moveHorizontal = transform.right * xMov;
         Vector3 moveVertical = transform.forward * zMov;
 
-        Vector3 velocity = (moveHorizontal + moveVertical) * speed;
+        Vector3 velocity = (moveHorizontal + moveVertical).normalized * speed;
 
         motor.Move(velocity);
+
+        //On calcule la rotation duu joueur en un vector3
+
+        float yRot = Input.GetAxisRaw("Mouse X");
+
+        Vector3 rotation = new Vector3(0, yRot, 0) * mouseSensitivityX;
+       
+        motor.Rotate(rotation);
+
+        //On calcule la rotation de la caméra du joueur en un vector3
+
+        float xRot = Input.GetAxisRaw("Mouse Y");
+
+        float cameraRotationX = xRot * mouseSensitivityY;
+
+        motor.RotateCamera(cameraRotationX);
+
     }
 }
