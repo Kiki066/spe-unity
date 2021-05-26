@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d4454f71d85928744be7771e2143dab7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -762,7 +762,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 805956082}
   life: 100
-  damage: 50
 --- !u!1 &965106808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d61b66c1a6f31a3448c7945603495569,
@@ -995,6 +994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de953dc63fb2224781028d08f231e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 50
+  player: {fileID: 805956083}
 --- !u!136 &2011176593
 CapsuleCollider:
   m_ObjectHideFlags: 0
