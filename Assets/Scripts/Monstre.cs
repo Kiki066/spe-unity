@@ -7,6 +7,8 @@ public class Monstre : MonoBehaviour
     [SerializeField]
     private float damage = 50f;
 
+    static Animator anim;
+
     [SerializeField]
     public Player player;
 
@@ -25,6 +27,7 @@ public class Monstre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,7 +39,14 @@ public class Monstre : MonoBehaviour
             {
                 player.gameObject.SetActive(false);
             }
+
+            anim.SetBool("hit", true);
         }
+        else
+        {
+            anim.SetBool("hit", false);
+        }
+        
     }
 
 
