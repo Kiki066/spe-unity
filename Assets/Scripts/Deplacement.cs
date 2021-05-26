@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerMotor))]
 
@@ -198,7 +199,13 @@ public class Deplacement : MonoBehaviour
             m_Source.Stop();
         }
 
+        //PAUSE---------------------------------------
+        bool pause = false;
+        if(Input.GetKey(KeyCode.Escape))
+            pause = !pause;
 
+        if (pause == true)
+            SceneManager.LoadScene("Pause");
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Monstre : MonoBehaviour
 {
@@ -47,7 +48,10 @@ public class Monstre : MonoBehaviour
             player.TakeDamage(Damage);
             if(player.Life <= 0)
             {
+                SceneManager.LoadScene("Defaite");
                 player.gameObject.SetActive(false);
+                
+
             }
 
             anim.SetTrigger("isPunching");
