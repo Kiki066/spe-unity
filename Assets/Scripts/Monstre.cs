@@ -40,15 +40,18 @@ public class Monstre : MonoBehaviour
                 player.gameObject.SetActive(false);
             }
 
-            anim.SetBool("hit", true);
+            anim.SetTrigger("isPunching");
+
         }
-        else
-        {
-            anim.SetBool("hit", false);
-        }
-        
+       
+            
     }
 
+    private void Update()
+    {
+        
+       
+    }
 
 
 }
