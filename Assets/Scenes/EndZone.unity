@@ -654,6 +654,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 827352802, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 827352803, guid: b835317857f00364fb66c649d5be8fec, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -682,7 +686,7 @@ PrefabInstance:
     - target: {fileID: 453708752696770907, guid: b835317857f00364fb66c649d5be8fec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.17
       objectReference: {fileID: 0}
     - target: {fileID: 453708752696770907, guid: b835317857f00364fb66c649d5be8fec,
         type: 3}
@@ -738,6 +742,27 @@ PrefabInstance:
     - {fileID: 827352800, guid: b835317857f00364fb66c649d5be8fec, type: 3}
     - {fileID: 827352801, guid: b835317857f00364fb66c649d5be8fec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b835317857f00364fb66c649d5be8fec, type: 3}
+--- !u!1 &805956082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3463475285564650312, guid: b835317857f00364fb66c649d5be8fec,
+    type: 3}
+  m_PrefabInstance: {fileID: 805956081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &805956083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805956082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6652f4d24d26a184e9eb9d9d3c82d68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 805956082}
+  life: 100
+  damage: 50
 --- !u!1 &965106808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d61b66c1a6f31a3448c7945603495569,
@@ -958,6 +983,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2021219745}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2011176591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011176590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de953dc63fb2224781028d08f231e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &2011176593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1078,6 +1115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: parasite_l_starkie
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 20033ae4a86d45e47af3fde4e3340882,
+        type: 3}
+      propertyPath: m_TagString
+      value: Monstre
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20033ae4a86d45e47af3fde4e3340882, type: 3}
