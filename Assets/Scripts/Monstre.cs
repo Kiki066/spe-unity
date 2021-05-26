@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Monstre : MonoBehaviour
 {
+
+    AudioSource m_Source;
+
+
     [SerializeField]
     private float damage = 50f;
+
+    [SerializeField]
+    private AudioClip roar;
+
+
 
     static Animator anim;
 
@@ -28,6 +37,7 @@ public class Monstre : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        m_Source = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,6 +51,8 @@ public class Monstre : MonoBehaviour
             }
 
             anim.SetTrigger("isPunching");
+            m_Source.clip = roar;
+            m_Source.Play();
 
         }
        

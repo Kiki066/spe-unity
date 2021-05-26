@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Deplacement : MonoBehaviour
 {
+    AudioSource m_Source;
+    
+
 
     [SerializeField]        //permet de faire apparaitre speed dans Unity
     private float speed = 2f;
@@ -15,7 +18,13 @@ public class Deplacement : MonoBehaviour
     [SerializeField]
     private float mouseSensitivityY = 3f;
 
+    //SONS--------------------------
+    [SerializeField]
+    private AudioClip walk;
+
     
+
+
 
     private PlayerMotor motor;
 
@@ -30,10 +39,14 @@ public class Deplacement : MonoBehaviour
     {
         motor = GetComponent<PlayerMotor>();
         anim = GetComponent<Animator>();
+        m_Source = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
+        
+
+
         //Calcul de la vitesse du joueur
         float xMov = Input.GetAxisRaw("Horizontal");
         float zMov = Input.GetAxisRaw("Vertical");
@@ -61,10 +74,7 @@ public class Deplacement : MonoBehaviour
 
         motor.RotateCamera(cameraRotationX);
 
-        if (Input.GetButtonDown("Jump"))
-        {
-           
-        }
+        
 
 
         //COURIR---------------------------------
@@ -73,12 +83,14 @@ public class Deplacement : MonoBehaviour
             if(speed < 6f)
                 speed = speed + 1f;
             anim.SetBool("isRunning", true);
+            m_Source.pitch = 1.5f;
         }
         else
         {
             if(speed > 2f)
                 speed = speed - 1f;
             anim.SetBool("isRunning", false);
+            m_Source.pitch = 1f;
         }
 
         if (Input.GetKey("q") && Input.GetKey("z"))
@@ -132,6 +144,7 @@ public class Deplacement : MonoBehaviour
         if (Input.GetKey("z"))
         {
             anim.SetBool("isWalking", true);
+           
         }
         else
         {
@@ -174,6 +187,18 @@ public class Deplacement : MonoBehaviour
         {
             anim.SetBool("isRight", false);
         }
+
+        if(Input.GetKeyDown("z"))
+        {
+            m_Source.clip = walk;
+            m_Source.Play();
+        }
+        if(Input.GetKeyUp("z"))
+        {
+            m_Source.Stop();
+        }
+
+
 
     }
 }

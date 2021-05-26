@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+   
+
     [SerializeField]
     private GameObject player;
 
     [SerializeField]
     private float life = 100f;
+
+
+  
+
 
     //[SerializeField]
     //public Monstre monstre;
@@ -28,10 +34,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         player = GetComponent<GameObject>();
+       
     }
 
     private void Update()
     {
+       
+
     }
 
     
