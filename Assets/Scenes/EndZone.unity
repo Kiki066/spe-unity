@@ -810,6 +810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: leonard Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7548567841808493601, guid: b835317857f00364fb66c649d5be8fec,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0f3a682bc8e28264c93116b2ac98b46b, type: 2}
     m_RemovedComponents:
     - {fileID: 827352800, guid: b835317857f00364fb66c649d5be8fec, type: 3}
     - {fileID: 827352801, guid: b835317857f00364fb66c649d5be8fec, type: 3}
