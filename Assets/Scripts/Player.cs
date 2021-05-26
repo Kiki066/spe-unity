@@ -40,6 +40,14 @@ public class Player : MonoBehaviour
     {
         Life -= damage;
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Collectable")
+        {
+                other.gameObject.SetActive(false);
+        }
+    }
+
 
 }

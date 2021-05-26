@@ -6,6 +6,7 @@ TagManager:
   tags:
   - leonard
   - Monstre
+  - Collectable
   layers:
   - Default
   - TransparentFX
