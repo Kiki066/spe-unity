@@ -154,5 +154,26 @@ public class Deplacement : MonoBehaviour
         {
             anim.SetBool("isWalkingRight", false);
         }
+
+
+
+        if (Input.GetKey("q"))
+        {
+            anim.SetBool("isLeft", true);
+        }
+        else
+        {
+            anim.SetBool("isLeft", false);
+        }
+
+        if (Input.GetKey("d"))
+        {
+            anim.SetBool("isRight", true);
+        }
+        else
+        {
+            anim.SetBool("isRight", false);
+        }
+
     }
 }
