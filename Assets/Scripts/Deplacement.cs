@@ -191,8 +191,12 @@ public class Deplacement : MonoBehaviour
 
         if(Input.GetKeyDown("z"))
         {
-            m_Source.clip = walk;
-            m_Source.Play();
+            if(!(MenuPause.jeuEnPause))
+            {
+                m_Source.clip = walk;
+                m_Source.Play();
+            }
+            
         }
         if(Input.GetKeyUp("z"))
         {
