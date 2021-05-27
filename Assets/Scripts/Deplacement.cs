@@ -200,12 +200,7 @@ public class Deplacement : MonoBehaviour
         }
 
         //PAUSE---------------------------------------
-        bool pause = false;
-        if(Input.GetKey(KeyCode.Escape))
-            pause = !pause;
-
-        if (pause == true)
-            SceneManager.LoadScene("Pause");
+       
 
     }
 }
