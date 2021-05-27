@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - leonard
+  - Monstre
+  - Collectable
+  - Play
   layers:
   - Default
   - TransparentFX
