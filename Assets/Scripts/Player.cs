@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float life = 100f;
 
+    [SerializeField]
+    private GameObject spawn;
+
 
   
 
@@ -32,14 +35,15 @@ public class Player : MonoBehaviour
     }
 
     private void Start()
-    {
+    { 
         player = GetComponent<GameObject>();
-       
+        //Vector3 spawnPos = spawn.transform.position;
+        //player.transform.position = spawnPos;
     }
 
     private void Update()
     {
-       
+
 
     }
 

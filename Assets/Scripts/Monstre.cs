@@ -41,16 +41,18 @@ public class Monstre : MonoBehaviour
         m_Source = GetComponent<AudioSource>();
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "leonard")
         {
             player.TakeDamage(Damage);
-            if(player.Life <= 0)
+            if (player.Life <= 0)
             {
+                
                 SceneManager.LoadScene("Defaite");
                 player.gameObject.SetActive(false);
-                
+
 
             }
 
